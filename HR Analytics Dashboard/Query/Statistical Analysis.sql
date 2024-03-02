@@ -225,6 +225,20 @@ GROUP BY
 ORDER BY
 	2 DESC;
 
+-- attrition rate based on gender
+SELECT
+	Gender,
+	COUNT(*) Total_Attrition,
+	COUNT(Gender) * 100.0 / SUM(COUNT(Gender)) OVER() AS Pct_Attrition
+FROM 
+	EmployeeAttrition
+WHERE
+	Attrition = 'Yes'
+GROUP BY
+	Gender
+ORDER BY
+	2 DESC;
+
 -- attrition rate based on marital status
 SELECT
 	MaritalStatus,
@@ -236,6 +250,20 @@ WHERE
 	Attrition = 'Yes'
 GROUP BY
 	MaritalStatus
+ORDER BY
+	2 DESC;
+
+-- attrition rate based on education
+SELECT
+	Education,
+	COUNT(*) Total_Attrition,
+	COUNT(Education) * 100.0 / SUM(COUNT(Education)) OVER() AS Pct_Attrition
+FROM 
+	EmployeeAttrition
+WHERE
+	Attrition = 'Yes'
+GROUP BY
+	Education
 ORDER BY
 	2 DESC;
 
