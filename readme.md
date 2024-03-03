@@ -4,29 +4,28 @@
 
 ### Problem Statement
 
-Dalam lingkungan bisnis yang semakin kompetitif, perusahaan menghadapi tantangan dalam memahami dan mengelola sumber daya manusia mereka secara efektif. Oleh karena itu, untuk meningkatkan kinerja organisasi dan memelihara lingkungan kerja yang sehat dan produktif, perusahaan perlu memahami secara menyeluruh demografi, kinerja, dan kepuasan karyawan.
+Dalam lingkungan bisnis yang semakin kompetitif, perusahaan menghadapi tantangan dalam memahami dan mengelola sumber daya manusia mereka secara efektif. Oleh karena itu, untuk meningkatkan kinerja organisasi dan memelihara lingkungan kerja yang sehat dan produktif, perusahaan perlu memahami secara menyeluruh attrition, kinerja, dan kepuasan karyawan.
 
-#### Analisis Demografi Karyawan
+#### Analisis Attrition Karyawan
 
-Analisis demografi karyawan sangat penting bagi perusahaan untuk memahami karakteristik dan komposisi tenaga kerja mereka. Dengan memahami demografi ini, perusahaan dapat mengidentifikasi tren dan pola dalam struktur karyawan mereka. Misalnya, dengan mengetahui proporsi karyawan berdasarkan status perkawinan, pendidikan, dan frekuensi perjalanan dinas, perusahaan dapat mengidentifikasi area di mana mereka mungkin perlu menyesuaikan kebijakan atau program untuk mendukung kebutuhan karyawan mereka. Selain itu, dengan mengevaluasi distribusi usia karyawan dan tingkat attrition berdasarkan jabatan pekerjaan, manajemen dapat mengantisipasi kebutuhan rekrutmen, pengembangan, atau retensi karyawan di masa depan.
+Analisis attrition sangat penting bagi perusahaan untuk memahami pola dan faktor-faktor yang menyebabkan karyawan meninggalkan perusahaan. Dengan memahami alasan di balik attrition, perusahaan dapat mengidentifikasi area-area yang memerlukan perbaikan dalam manajemen sumber daya manusia dan lingkungan kerja. Misalnya, dengan mengevaluasi tingkat attrition berdasarkan faktor-faktor seperti usia, jabatan pekerjaan, dan durasi pengalaman kerja, perusahaan dapat mengidentifikasi pola-pola tertentu yang mungkin mempengaruhi keputusan karyawan untuk meninggalkan perusahaan. Selain itu, dengan memperhatikan pola attrition di antara karyawan dengan tingkat pendidikan tertentu atau yang sering melakukan perjalanan dinas, manajemen dapat menyesuaikan strategi rekrutmen, pengembangan, dan retensi untuk mengurangi tingkat attrition di masa depan. Dengan demikian, analisis attrition dapat menjadi landasan bagi perusahaan untuk mengambil langkah-langkah proaktif dalam mempertahankan dan mengembangkan tenaga kerja mereka.
 
 ##### Business Questions:
 
-1. Berapa proporsi karyawan berdasarkan status perkawinan?
-2. Bagaimana distribusi karyawan berdasarkan tingkat pendidikan mereka?
-3. Bagaimana proporsi karyawan berdasarkan frekuensi perjalanan dinas?
-4. Bagaimana distribusi usia karyawan di perusahaan?
-5. Bagaimana attrition rate berdasarkan jabatan pekerjaan?
+1. Berapa tingkat attrition berdasarkan jabatan pekerjaan di perusahaan?
+2. Apakah ada perbedaan tingkat attrition antara level jabatan yang berbeda?
+3. Bagaimana distribusi attrition berdasarkan status perkawinan karyawan?
+4. Apakah terdapat pola attrition yang berbeda antara karyawan dengan pendidikan tingkat sarjana dan yang lainnya?
+5. Bagaimana proporsi karyawan yang melakukan perjalanan dinas sering mengalami attrition dibandingkan dengan yang tidak?
 
 ##### Threshold Metrics:
 
-1. Proporsi karyawan dengan pendidikan tingkat sarjana atau lebih tinggi: Minimal 70% dari total karyawan.
-2. Persentase karyawan di setiap departemen yang memiliki pengalaman perjalanan dinas yang sering: Maksimal 20% dari total karyawan di setiap departemen.
-3. Distribusi usia karyawan:
-   - 20-30 tahun: Minimal 25%
-   - 31-40 tahun: Minimal 30%
-   - 41-50 tahun: Minimal 25%
-   - Lebih dari 50 tahun: Maksimal 20%
+1. **Attrition Based on Job Role:**
+   - Threshold: Maksimal 15% attrition rate untuk setiap jabatan pekerjaan.
+   - Simulasi: Jika tingkat attrition untuk suatu jabatan pekerjaan melebihi 15%, maka perlu dilakukan evaluasi dan tindakan untuk mengidentifikasi penyebabnya dan mengurangi tingkat attrition.
+2. **Attrition Based on Job Level:**
+   - Threshold: Maksimal 10% attrition rate untuk setiap tingkatan jabatan.
+   - Simulasi: Jika tingkat attrition untuk tingkatan jabatan tertentu melebihi 10%, perlu dilakukan analisis lebih lanjut untuk memahami alasan di baliknya dan mengambil langkah-langkah untuk mengurangi attrition.
 
 #### Analisis Kinerja Karyawan
 
@@ -34,17 +33,25 @@ Analisis kinerja karyawan memungkinkan perusahaan untuk mengevaluasi produktivit
 
 ##### Business Questions
 
-1. Bagaimana *attrition rate* berdasarkan overtime?
+1. Berapa proporsi karyawan yang overtime?
 2. Berapa jumlah karyawan yang merupakan pegawai loyal (bekerja di perusahaan >10 tahun) dan memiliki job involvement yang tinggi?
 3. Siapa saja karyawan yang direkomendasikan untuk mendapatkan promosi atau pensiun berdasarkan kriteria kinerja dan loyalitas mereka?
 4. Siapa saja karyawan yang termasuk dalam kategori pegawai loyal dengan tingkat keterlibatan kerja yang tinggi?
 
 ##### Threshold Metrics:
 
-1. Attrition rate di setiap departemen: Maksimal 10% per tahun.
-2. Persentase karyawan yang menerima promosi dalam setahun terakhir: Minimal 5% dari total karyawan.
-3. Jumlah karyawan yang merupakan loyal employee (bekerja di perusahaan lebih dari 10 tahun) dan memiliki tingkat keterlibatan kerja yang tinggi: Minimal 15% dari total karyawan.
-4. Proporsi karyawan yang melakukan overtime: Maksimal 20% dari total karyawan.
+1. **Overtime:**
+   - Threshold: Proporsi karyawan yang melakukan overtime: Maksimal 20% dari total karyawan.
+   - Simulasi: Jika proporsi karyawan yang melakukan overtime melebihi 20% dari total karyawan, perusahaan perlu mengevaluasi beban kerja dan mencari cara untuk mengelola waktu kerja agar tidak berdampak negatif pada kesejahteraan dan produktivitas karyawan.
+2. **Loyality:**
+   - Threshold: Jumlah karyawan yang merupakan loyal employee (bekerja di perusahaan lebih dari 10 tahun) dan memiliki tingkat keterlibatan kerja yang tinggi: Minimal 15% dari total karyawan.
+   - Simulasi: Jika jumlah karyawan yang memenuhi kriteria loyal employee dan memiliki tingkat keterlibatan kerja yang tinggi kurang dari 15%, perusahaan perlu memperhatikan strategi retensi dan pengembangan karyawan untuk meningkatkan tingkat keterlibatan dan loyalitas.
+3. **Promotion:**
+   - Threshold: Persentase karyawan yang menerima promosi dalam setahun terakhir: Minimal 5% dari total karyawan.
+   - Simulasi: Jika persentase karyawan yang menerima promosi dalam setahun terakhir kurang dari 5%, perusahaan perlu mengevaluasi kebijakan promosi dan memastikan bahwa ada cukup kesempatan bagi karyawan untuk berkembang dan naik jabatan.
+4. **Retirement:**
+   - Threshold: Karyawan yang mendekati pensiun dan tidak lagi dapat memberikan kontribusi signifikan terhadap tujuan perusahaan.
+   - Simulasi: Ketika seorang karyawan mendekati masa pensiun dan tidak lagi memberikan kontribusi yang signifikan terhadap tujuan perusahaan, maka perusahaan akan mempertimbangkan untuk melakukan pensiun.
 
 #### Analisis Kepuasaan Karyawan
 
@@ -60,22 +67,28 @@ Analisis kepuasan karyawan merupakan indikator penting dari kesejahteraan dan ki
 
 ##### Threshold Metrics:
 
-1. Tingkat kepuasan rendah (low satisfaction) dalam aspek pekerjaan (job), lingkungan (environment), dan hubungan (relationship): Maksimal 15% untuk setiap aspek.
-2. Tingkat kepuasan rendah (low satisfaction) dalam aspek work-life balance: Maksimal 15% dari total karyawan.
-3. Distribusi tingkat kepuasan karyawan berdasarkan jabatan pekerjaan:
-   - Manajer: Minimal 80% puas
-   - Supervisor: Minimal 75% puas
-   - Staff: Minimal 70% puas
-4. Persentase karyawan yang merasa mendapatkan cukup dukungan dari manajemen: Minimal 80%.
+1. **Satisfaction Level:**
+   Threshold: Tingkat kepuasan rendah (low satisfaction) dalam aspek pekerjaan (job), lingkungan (environment), dan hubungan (relationship): Maksimal 15% untuk setiap aspek.
+   Simulasi: Jika lebih dari 15% dari total karyawan mengungkapkan tingkat kepuasan yang rendah dalam salah satu aspek tersebut, perusahaan perlu melakukan analisis mendalam untuk mengidentifikasi masalah dan mengambil tindakan perbaikan yang diperlukan untuk meningkatkan kepuasan karyawan.
+2. **Work-Life Balance:**
+   Threshold: Tingkat kepuasan rendah (low satisfaction) dalam aspek work-life balance: Maksimal 15% dari total karyawan.
+   Simulasi: Jika lebih dari 15% dari total karyawan mengungkapkan ketidakpuasan terhadap work-life balance, perusahaan perlu meninjau kebijakan dan praktik yang terkait dengan keseimbangan kerja-hidup, serta mengambil langkah-langkah untuk meningkatkan kesejahteraan karyawan.
+3. **Job Satisfaction berdasarkan Job Role:**
+
+   - Threshold:
+     - Manajer: Minimal 80% puas
+     - Supervisor: Minimal 75% puas
+     - Staff: Minimal 70% puas
+   - Simulasi: Jika tingkat kepuasan di salah satu level jabatan di bawah ambang batas minimum yang ditetapkan, perusahaan perlu mengevaluasi kondisi kerja dan memastikan bahwa manajemen di setiap tingkat memperhatikan kebutuhan dan masukan karyawan.
 
 #### Identifikasi Karyawan yang Melakukan Turnover/Attrition
 
-Perusahaan juga perlu mampu mengidentifikasi karyawan yang cenderung melakukan turnover atau attrition. Tanpa kemampuan untuk mengenali pola-pola ini, perusahaan akan kesulitan dalam mengambil tindakan pencegahan atau penggantian yang tepat waktu. Identifikasi ini penting untuk meminimalkan kerugian yang disebabkan oleh kehilangan karyawan berpotensi tinggi atau berkinerja baik.
+Perusahaan juga perlu mengidentifikasi karyawan yang cenderung melakukan turnover atau attrition. Tanpa kemampuan untuk mengenali pola-pola ini, perusahaan akan kesulitan dalam mengambil tindakan pencegahan atau penggantian yang tepat waktu. Identifikasi ini penting untuk meminimalkan kerugian yang disebabkan oleh kehilangan karyawan berpotensi tinggi atau berkinerja baik.
 
 ### Objective
 
-1. Membuat visualisasi dalam bentuk dashboard, yang terbagi menjadi 3 bagian yakni Analisis Demografi Karyawan, Analisis Kinerja Karyawan, dan Analisis Kepuasaan Karyawan.
-2. Membuat predictive modeling untuk memprediksi karyawan yang turnover/attrition
+1. Membuat visualisasi dalam bentuk dashboard, yang terbagi menjadi 3 bagian yakni Analisis Attrition Karyawan, Analisis Kinerja Karyawan, dan Analisis Kepuasaan Karyawan.
+2. Membuat predictive modeling untuk membantu memprediksi karyawan yang turnover/attrition
 
 ### Goals
 

@@ -50,3 +50,13 @@ ORDER BY
         WHEN 'Low' THEN 4
 		ELSE 5
 	END;
+
+-- work-life balance
+SELECT
+	WorkLifeBalance,
+	COUNT(WorkLifeBalance) AS Total_WorkLifeBalance,
+	COUNT(WorkLifeBalance) * 100.0 / SUM(COUNT(*)) OVER() AS WorkLifeBalance_Pct
+FROM 
+    EmployeeAttrition
+GROUP BY
+    WorkLifeBalance;

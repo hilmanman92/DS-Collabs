@@ -27,14 +27,23 @@ outlierstats as (
         emp.JobLevel, Avg_Salary, StDev_Salary
 )
 
--- fairness paid
+-- paid fairness
 select
 	emp.*,
+	ou.Avg_Salary,
+	ou.StDev_Salary,
+	ou.LowerBoundSalary,
+	ou.UpperBoundSalary,
 	case
 		when emp.MonthlyIncome < ou.Avg_Salary and emp.MonthlyIncome < ou.LowerBoundSalary then 'Underpaid'
 		when emp.MonthlyIncome > ou.Avg_Salary and emp.MonthlyIncome > ou.UpperBoundSalary then 'Overpaid'
 		else 'Fairpaid'
-		end as PaidFairness
+		end as PaidFairness,
+	case
+		when emp.MonthlyIncome < ou.Avg_Salary and emp.MonthlyIncome < ou.LowerBoundSalary then round(((MonthlyIncome - LowerBoundSalary)/MonthlyIncome) * 100,2)
+		when emp.MonthlyIncome > ou.Avg_Salary and emp.MonthlyIncome > ou.UpperBoundSalary then round(((MonthlyIncome - UpperBoundSalary)/MonthlyIncome) * 100,2)
+		else 0
+		end as PercentageFairness
 	from
 		EmployeeAttrition emp 
 		join 
