@@ -94,17 +94,3 @@ Perusahaan juga perlu mengidentifikasi karyawan yang cenderung melakukan turnove
 
 1. Memberikan insight terkait business questions yang diajukan management dan mengacu kepada threshold metrics, apakah semua metrics berhasil tidak melebihi thresholdnya.
 2. Menurunkan attrition rate karyawan, dan menemukan faktor terpenting yang mengacu pada attrition rate.
-
-## Data Preprocessing
-
-### Report Analysis (Dashboard)
-
-### Predictive Modelling (Machine Learning)
-
-## Data Analysis
-
-### Report Analysis (Dashboard)
-
-### Predictive Modelling (Machine Learning)
-
-## Summary & Recommendation
